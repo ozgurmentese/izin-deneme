@@ -1,0 +1,36 @@
+<table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Ad</th>
+            <th scope="col">Soy Ad</th>
+            <th scope="col">Giriş Tarihi</th>
+            <th scope="col">
+                <button class="btn btn-success" click="routerLink" routerLink="personel-izin">
+         İzin Ekle
+        </button>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr *ngFor="let personel of personeller">
+            <th scope="row">{{ personel.id }}</th>
+            <td>{{ personel.ad }}</td>
+            <td>{{ personel.soyAd }}</td>
+            <td>{{ personel.girisTarihi }}</td>
+            <!-- <td>
+                <button class="btn btn-warning" click="routerLink" routerLink="update/{{ personel.id }}">
+          Güncelle
+        </button>
+                <button class="btn btn-danger mx-2" click="routerLink" routerLink="delete/{{ personel.id }}">
+          Sil
+        </button>
+            </td> -->
+        </tr>
+    
+    <button class="btn btn-danger mx-2" click="routerLink" routerLink="personel/add">
+Ekle
+</button>
+    </tbody>
+</table>

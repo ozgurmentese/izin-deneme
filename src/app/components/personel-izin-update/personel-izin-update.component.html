@@ -1,0 +1,49 @@
+<div class="content">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="title text-center">Personel İzin</h5>
+            </div>
+            <div class="card-body">
+                <form [formGroup]="personelIzinUpdateForm">
+                    <div class="mb-3">
+                        <label for="Id">Id</label>
+                        <div class="form-group">
+                            <input type="number" id="id" formControlName="id" class="form-control"
+                                 [(ngModel)]="personelIzin.id" />
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="personelId">Personel Id</label>
+                        <div class="form-group">
+                            <input type="number" id="personelId" formControlName="personelId" class="form-control"
+                                 [(ngModel)]="personelId" />
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="gidis">İzine Gidiş</label>
+                        <div class="form-group">
+                            <input type="date" id="gidis" formControlName="gidis" class="form-control"
+                                placeholder="İzine Gidiş" />
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="donus">İzinden Dönüş</label>
+                        <div class="form-group">
+                            <input type="date" id="donus" formControlName="donus" class="form-control"
+                                placeholder="İzinden Dönüş" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-fill btn-dark" (click)="backToList()">
+                    Geri dön
+                </button>
+                <button class="btn btn-fill btn-success" (click)="update()" style="float: right">
+                    Ekle
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

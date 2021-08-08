@@ -1,0 +1,42 @@
+<div class="content">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="title text-center">Personel Ekleme</h5>
+            </div>
+            <div class="card-body">
+                <form [formGroup]="personelAddForm">
+                    <div class="mb-3">
+                        <label for="ad">Adı</label>
+                        <div class="form-group">
+                            <input type="text" id="ad" formControlName="ad" class="form-control"
+                                placeholder="Adı" />
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="soyAd">Soyad</label>
+                        <div class="form-group">
+                            <input type="text" id="soyAd" formControlName="soyAd" class="form-control"
+                                placeholder="soyAd" />
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="girisTarihi">Giriş Tarihi</label>
+                        <div class="form-group">
+                            <input type="date" id="girisTarihi" formControlName="girisTarihi" class="form-control"
+                                placeholder="Giriş Tarihi" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-fill btn-dark" (click)="backToList()">
+                    Geri dön
+                </button>
+                <button class="btn btn-fill btn-success" (click)="add()" style="float: right">
+                    Ekle
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
